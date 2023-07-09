@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Provides a diagonal decoration to a [Container] or a [BoxDecoration].
 class DiagonalDecoration extends BoxDecoration {
   const DiagonalDecoration({
     this.lineColor = const Color.fromRGBO(219, 219, 219, 1),
@@ -8,10 +9,20 @@ class DiagonalDecoration extends BoxDecoration {
     this.lineWidth = 1,
     this.distanceBetweenLines = 5,
   });
+
+  // The color of the diagonal lines.
   final Color lineColor;
+
+  // The color of the background.
   final Color backgroundColor;
+
+  // The radius of the container.
   final Radius radius;
+
+  // The width of the diagonal lines.
   final double lineWidth;
+
+  // The distance between the diagonal lines.
   final double distanceBetweenLines;
 
   @override

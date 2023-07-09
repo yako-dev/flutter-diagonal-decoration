@@ -1,6 +1,6 @@
 name: diagonal_decoration
-description: Custom box decoration with diagonals on the background
-version: 1.0.0+1
+description: Custom box decoration with diagonals on the background. Contains DiagonalDecoration and MatrixDecoration.
+version: 1.0.1+2
 repository: https://github.com/yako-dev/flutter-diagonal-decoration
 issue_tracker: https://github.com/yako-dev/flutter-diagonal-decoration/issues
 

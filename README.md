@@ -9,7 +9,7 @@
 In your pubspec.yaml
 ```yaml
 dependencies:
-  diagonal_decoration: ^1.0.0
+  diagonal_decoration: ^1.0.1
 ```
 <br>
 
