@@ -11,6 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: Center(
         child: Column(
@@ -55,7 +56,13 @@ class MainApp extends StatelessWidget {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 36),
         padding: const EdgeInsets.all(25),
-        decoration: const DiagonalDecoration(),
+        decoration: const DiagonalDecoration(
+          lineColor: Colors.black,
+          backgroundColor: Colors.grey,
+          radius: Radius.circular(20),
+          lineWidth: 1,
+          distanceBetweenLines: 5,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
