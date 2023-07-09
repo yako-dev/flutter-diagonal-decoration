@@ -1,5 +1,8 @@
 # Diagonal Decoration
 
+You can use plain color or gradient for backgrounds, but there is a third option that can make your app look more interesting.
+Use this DiagonalDecoration or MatrixDecoration to create custom backgrounds for your containers.
+
 <p align="center">
   <img src="https://github.com/yako-dev/flutter-diagonal-decoration/blob/main/images/readme_header.png?raw=true" height="600px">
 </p>
@@ -9,7 +12,7 @@
 In your pubspec.yaml
 ```yaml
 dependencies:
-  diagonal_decoration: ^1.0.1
+  diagonal_decoration: ^1.0.2
 ```
 <br>
 
