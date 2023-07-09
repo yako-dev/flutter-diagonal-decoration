@@ -28,17 +28,6 @@ class MainApp extends StatelessWidget {
             const SizedBox(height: 20),
             matrixContainer(),
             const SizedBox(height: 40),
-            Container(
-              width: 200,
-              height: 200,
-              decoration: const DiagonalDecoration(),
-              child: Center(
-                  child: Text('Press me',
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey.shade600))),
-            )
           ],
         ),
       )),
@@ -68,13 +57,7 @@ class MainApp extends StatelessWidget {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 36),
         padding: const EdgeInsets.all(25),
-        decoration: const DiagonalDecoration(
-          lineColor: Colors.black,
-          backgroundColor: Colors.grey,
-          radius: Radius.circular(20),
-          lineWidth: 1,
-          distanceBetweenLines: 5,
-        ),
+        decoration: const DiagonalDecoration(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

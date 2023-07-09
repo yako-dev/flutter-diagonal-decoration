@@ -1,6 +1,6 @@
 name: diagonal_decoration
 description: Custom box decoration with diagonals on the background
-version: 0.1.0+1
+version: 1.0.0+1
 repository: https://github.com/yako-dev/flutter-diagonal-decoration
 issue_tracker: https://github.com/yako-dev/flutter-diagonal-decoration/issues
 
@@ -13,7 +13,7 @@ screenshots:
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: 3.10.0
+  flutter: ">=3.10.0"
 
 dependencies:
   flutter:
