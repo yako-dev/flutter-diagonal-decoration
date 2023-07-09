@@ -1,7 +1,7 @@
 # Diagonal Decoration
 
 <p align="center">
-  <img src="https://github.com/yako-dev/flutter-diagonal-decoration/blob/main/images/readme_header.png?raw=true">
+  <img src="https://github.com/yako-dev/flutter-diagonal-decoration/blob/main/images/readme_header.png?raw=true" height="600px">
 </p>
 
 
