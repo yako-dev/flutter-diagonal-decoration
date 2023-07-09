@@ -27,6 +27,18 @@ class MainApp extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 20),
             matrixContainer(),
+            const SizedBox(height: 40),
+            Container(
+              width: 200,
+              height: 200,
+              decoration: const DiagonalDecoration(),
+              child: Center(
+                  child: Text('Press me',
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.shade600))),
+            )
           ],
         ),
       )),
