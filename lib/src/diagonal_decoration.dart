@@ -60,27 +60,27 @@ class DiagonalPainter extends BoxPainter {
       ..style = PaintingStyle.fill;
     canvas.drawRRect(rrect, paint);
 
-    Path _path = Path();
+    Path path = Path();
     Offset position = rect.center;
     double widthf = rect.width / 2.0;
     double heightf = rect.height / 2.0;
-    _path.moveTo(position.dx, position.dy);
+    path.moveTo(position.dx, position.dy);
     for (int i = 0; i < widthf / distanceBetweenLines * 2; i++) {
-      _path.relativeMoveTo(-distanceBetweenLines * i, 0);
-      _path.relativeMoveTo(widthf, -heightf);
-      _path.relativeLineTo(-widthf * 2, heightf * 2);
-      _path.moveTo(position.dx, position.dy);
+      path.relativeMoveTo(-distanceBetweenLines * i, 0);
+      path.relativeMoveTo(widthf, -heightf);
+      path.relativeLineTo(-widthf * 2, heightf * 2);
+      path.moveTo(position.dx, position.dy);
 
-      _path.relativeMoveTo(distanceBetweenLines * i, 0);
-      _path.relativeMoveTo(widthf, -heightf);
-      _path.relativeLineTo(-widthf * 2, heightf * 2);
-      _path.moveTo(position.dx, position.dy);
+      path.relativeMoveTo(distanceBetweenLines * i, 0);
+      path.relativeMoveTo(widthf, -heightf);
+      path.relativeLineTo(-widthf * 2, heightf * 2);
+      path.moveTo(position.dx, position.dy);
     }
     canvas.save();
     canvas.clipRRect(rrect);
 
     canvas.drawPath(
-        _path..fillType = PathFillType.evenOdd,
+        path..fillType = PathFillType.evenOdd,
         Paint()
           ..color = lineColor
           ..style = PaintingStyle.stroke
