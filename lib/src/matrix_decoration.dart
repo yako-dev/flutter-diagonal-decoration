@@ -63,7 +63,7 @@ class MatrixPainter extends BoxPainter {
     final lineHeight = rect.height / lineCount;
 
     final diagonalPaint = Paint()
-      ..color = Colors.grey.shade300
+      ..color = lineColor
       ..strokeWidth = lineWidth;
 
     canvas.save();
