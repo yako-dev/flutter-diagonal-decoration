@@ -4,7 +4,7 @@ You can use plain color or gradient for backgrounds, but there is a third option
 Use this DiagonalDecoration or MatrixDecoration to create custom backgrounds for your containers.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip" height="600px">
+  <img src="https://raw.githubusercontent.com/yako-dev/flutter-diagonal-decoration/main/images/readme_header.png" height="600px">
 </p>
 
 
