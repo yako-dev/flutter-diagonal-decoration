@@ -1,5 +1,8 @@
 # Diagonal Decoration
 
+[![pub package](https://img.shields.io/pub/v/diagonal_decoration.svg)](https://pub.dev/packages/diagonal_decoration)
+[![CI](https://github.com/yako-dev/flutter-diagonal-decoration/actions/workflows/ci.yml/badge.svg)](https://github.com/yako-dev/flutter-diagonal-decoration/actions/workflows/ci.yml)
+
 You can use plain color or gradient for backgrounds, but there is a third option that can make your app look more interesting.
 Use this DiagonalDecoration or MatrixDecoration to create custom backgrounds for your containers.
 
@@ -12,7 +15,7 @@ Use this DiagonalDecoration or MatrixDecoration to create custom backgrounds for
 In your pubspec.yaml
 ```yaml
 dependencies:
-  diagonal_decoration: ^1.0.2
+  diagonal_decoration: ^1.2.0
 ```
 <br>
 
@@ -32,9 +35,22 @@ Just add DiagonalDecoration or MatrixDecoration to your Container's decoration p
        backgroundColor: Colors.grey,
        radius: Radius.circular(20),
        lineWidth: 1,
-       distanceBetweenLines: 5,
+       distanceBetweenLines: 5, // must be greater than 0
     )
 ```
+```dart
+    decoration: const MatrixDecoration(
+       lineColor: Colors.black12,
+       backgroundColor: Colors.white,
+       radius: Radius.circular(12),
+       lineWidth: 1,
+       lineCount: 20,
+    )
+```
+
+Both decorations work with `AnimatedContainer`, which animates between two
+decorations of the same type, and with `Container(clipBehavior: ...)`, which
+clips the child to the rounded corners.
 
 <br>
 
