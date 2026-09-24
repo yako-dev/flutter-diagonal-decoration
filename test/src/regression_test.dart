@@ -47,8 +47,9 @@ void main() {
       expect(same.hashCode, equals(base.hashCode));
     });
 
-    testWidgets('rebuilding with a new lineColor repaints with it',
-        (tester) async {
+    testWidgets('rebuilding with a new lineColor repaints with it', (
+      tester,
+    ) async {
       await tester.pumpWidget(
         _boxWith(const DiagonalDecoration(lineColor: Colors.red)),
       );
@@ -63,15 +64,20 @@ void main() {
       );
     });
 
-    testWidgets('AnimatedContainer animates between two decorations',
-        (tester) async {
+    testWidgets('AnimatedContainer animates between two decorations', (
+      tester,
+    ) async {
       await tester.pumpWidget(
-        _boxWith(const DiagonalDecoration(lineColor: Colors.red),
-            animated: true),
+        _boxWith(
+          const DiagonalDecoration(lineColor: Colors.red),
+          animated: true,
+        ),
       );
       await tester.pumpWidget(
-        _boxWith(const DiagonalDecoration(lineColor: Colors.blue),
-            animated: true),
+        _boxWith(
+          const DiagonalDecoration(lineColor: Colors.blue),
+          animated: true,
+        ),
       );
       await tester.pump(const Duration(milliseconds: 500));
       final mid = _decoratedBox(tester).decoration;
@@ -104,8 +110,10 @@ void main() {
       );
       final mid = DiagonalDecoration.lerp(a, b, 0.5)!;
       expect(mid.lineColor, Color.lerp(a.lineColor, b.lineColor, 0.5));
-      expect(mid.backgroundColor,
-          Color.lerp(a.backgroundColor, b.backgroundColor, 0.5));
+      expect(
+        mid.backgroundColor,
+        Color.lerp(a.backgroundColor, b.backgroundColor, 0.5),
+      );
       expect(mid.radius, const Radius.circular(5));
       expect(mid.lineWidth, 2);
       expect(mid.distanceBetweenLines, 6);
@@ -134,17 +142,19 @@ void main() {
       );
     });
 
-    test('painter draws no lines when distanceBetweenLines is not positive',
-        () {
-      // The old painter looped forever here (this test hangs on it).
-      final recorder = ui.PictureRecorder();
-      DiagonalPainter(Colors.black, Colors.white, Radius.zero, 1, 0).paint(
-        Canvas(recorder),
-        Offset.zero,
-        const ImageConfiguration(size: Size(100, 100)),
-      );
-      recorder.endRecording().dispose();
-    });
+    test(
+      'painter draws no lines when distanceBetweenLines is not positive',
+      () {
+        // The old painter looped forever here (this test hangs on it).
+        final recorder = ui.PictureRecorder();
+        DiagonalPainter(Colors.black, Colors.white, Radius.zero, 1, 0).paint(
+          Canvas(recorder),
+          Offset.zero,
+          const ImageConfiguration(size: Size(100, 100)),
+        );
+        recorder.endRecording().dispose();
+      },
+    );
   });
 
   group('MatrixDecoration regressions', () {
@@ -166,8 +176,9 @@ void main() {
       expect(same.hashCode, equals(base.hashCode));
     });
 
-    testWidgets('rebuilding with a new lineColor repaints with it',
-        (tester) async {
+    testWidgets('rebuilding with a new lineColor repaints with it', (
+      tester,
+    ) async {
       await tester.pumpWidget(
         _boxWith(const MatrixDecoration(lineColor: Colors.red, lineCount: 1)),
       );
@@ -182,14 +193,17 @@ void main() {
       );
     });
 
-    testWidgets('AnimatedContainer animates between two decorations',
-        (tester) async {
+    testWidgets('AnimatedContainer animates between two decorations', (
+      tester,
+    ) async {
       await tester.pumpWidget(
         _boxWith(const MatrixDecoration(lineColor: Colors.red), animated: true),
       );
       await tester.pumpWidget(
-        _boxWith(const MatrixDecoration(lineColor: Colors.blue),
-            animated: true),
+        _boxWith(
+          const MatrixDecoration(lineColor: Colors.blue),
+          animated: true,
+        ),
       );
       await tester.pump(const Duration(milliseconds: 500));
       final mid = _decoratedBox(tester).decoration;

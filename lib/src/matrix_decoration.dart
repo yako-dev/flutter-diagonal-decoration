@@ -112,13 +112,8 @@ class MatrixDecoration extends BoxDecoration {
   }
 
   @override
-  int get hashCode => Object.hash(
-        lineColor,
-        backgroundColor,
-        radius,
-        lineWidth,
-        lineCount,
-      );
+  int get hashCode =>
+      Object.hash(lineColor, backgroundColor, radius, lineWidth, lineCount);
 
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
