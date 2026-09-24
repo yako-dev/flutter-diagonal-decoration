@@ -12,7 +12,8 @@ void main() {
 
     test('has correct default values', () {
       const decoration = DiagonalDecoration();
-      expect(decoration.lineColor, equals(const Color.fromRGBO(219, 219, 219, 1)));
+      expect(
+          decoration.lineColor, equals(const Color.fromRGBO(219, 219, 219, 1)));
       expect(decoration.backgroundColor, equals(Colors.white));
       expect(decoration.radius, equals(const Radius.circular(20)));
       expect(decoration.lineWidth, equals(1.0));
@@ -88,7 +89,7 @@ void main() {
       expect(tester.takeException(), isNull);
     });
 
-    testWidgets('renders with zero distanceBetweenLines without error',
+    testWidgets('renders with a small distanceBetweenLines without error',
         (tester) async {
       await tester.pumpWidget(
         MaterialApp(
@@ -110,8 +111,10 @@ void main() {
 
     test('has correct default values', () {
       const decoration = MatrixDecoration();
-      expect(decoration.lineColor, equals(const Color.fromRGBO(220, 220, 220, 1)));
-      expect(decoration.backgroundColor, equals(const Color.fromRGBO(235, 235, 235, 1)));
+      expect(
+          decoration.lineColor, equals(const Color.fromRGBO(220, 220, 220, 1)));
+      expect(decoration.backgroundColor,
+          equals(const Color.fromRGBO(235, 235, 235, 1)));
       expect(decoration.radius, equals(const Radius.circular(20)));
       expect(decoration.lineWidth, equals(1.0));
       expect(decoration.lineCount, equals(20.0));
