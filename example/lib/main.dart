@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:diagonal_decoration/diagonal_decoration.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() {
   runApp(const MainApp());

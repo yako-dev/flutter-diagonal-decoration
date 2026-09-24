@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'dart:ui' show lerpDouble;
 
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 /// Provides a matrix decoration to a [Container] or a [BoxDecoration].
 class MatrixDecoration extends BoxDecoration {
