@@ -89,7 +89,7 @@ void main() {
       expect(tester.takeException(), isNull);
     });
 
-    testWidgets('renders with zero distanceBetweenLines without error',
+    testWidgets('renders with a small distanceBetweenLines without error',
         (tester) async {
       await tester.pumpWidget(
         MaterialApp(
