@@ -13,22 +13,25 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const SizedBox(height: 80),
-            const Text('Diagonal Decoration',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 20),
-            diagonalContainer(),
-            const SizedBox(height: 40),
-            const Text('Matrix Decoration',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 20),
-            matrixContainer(),
-            const SizedBox(height: 40),
-          ],
+          // Scrolls instead of overflowing in landscape and on short screens.
+          body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SizedBox(height: 80),
+              const Text('Diagonal Decoration',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 20),
+              diagonalContainer(),
+              const SizedBox(height: 40),
+              const Text('Matrix Decoration',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 20),
+              matrixContainer(),
+              const SizedBox(height: 40),
+            ],
+          ),
         ),
       )),
     );
@@ -40,15 +43,19 @@ class MainApp extends StatelessWidget {
         children: [
           Icon(icon),
           const SizedBox(width: 15),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title),
-              const SizedBox(height: 5),
-              Text(subtitle,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 16)),
-            ],
+          // Flexible lets long text wrap on narrow phones instead of
+          // overflowing the row.
+          Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title),
+                const SizedBox(height: 5),
+                Text(subtitle,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 16)),
+              ],
+            ),
           )
         ],
       );
@@ -75,7 +82,9 @@ class MainApp extends StatelessWidget {
   Container matrixContainer() {
     return Container(
       width: 240,
-      height: 160,
+      // A minimum instead of a fixed height, so larger text sizes grow the
+      // box instead of overflowing it.
+      constraints: const BoxConstraints(minHeight: 160),
       padding: const EdgeInsets.all(20),
       decoration: const MatrixDecoration(),
       child: const Column(
