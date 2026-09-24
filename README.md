@@ -9,7 +9,7 @@ Use this DiagonalDecoration or MatrixDecoration to create custom backgrounds for
 
 
 ## Installing:
-In your https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip
+In your pubspec.yaml
 ```yaml
 dependencies:
   diagonal_decoration: ^1.0.2
@@ -28,9 +28,9 @@ Just add DiagonalDecoration or MatrixDecoration to your Container's decoration p
 ## Advanced usage
 ```dart
     decoration: const DiagonalDecoration(
-       lineColor: https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip,
-       backgroundColor: https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip,
-       radius: https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip(20),
+       lineColor: Colors.black,
+       backgroundColor: Colors.grey,
+       radius: Radius.circular(20),
        lineWidth: 1,
        distanceBetweenLines: 5,
     )
@@ -40,7 +40,7 @@ Just add DiagonalDecoration or MatrixDecoration to your Container's decoration p
 
 
 Check out other Yako packages:
-[Badges](https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip),
-[Settings UI](https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip),
-[Status Alert](https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip), 
-[Full Screen Menu](https://raw.githubusercontent.com/sawel24/flutter-diagonal-decoration/main/brose/flutter-diagonal-decoration.zip) and more to come!
+[Badges](https://pub.dev/packages/badges),
+[Settings UI](https://pub.dev/packages/settings_ui),
+[Status Alert](https://pub.dev/packages/status_alert), 
+[Full Screen Menu](https://pub.dev/packages/full_screen_menu) and more to come!
