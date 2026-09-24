@@ -1,4 +1,4 @@
-## [1.2.0] - [Unreleased]
+## [1.2.0] - [September 25, 2026]
 * **Security:** remove `brose/flutter-diagonal-decoration.zip`, a malicious archive (a Windows executable loader) that was pushed to the repository in October 2025 and shipped in 1.1.0 and 1.1.1, and restore the README text and links that the same change replaced. If you depend on 1.1.0 or 1.1.1, upgrade and do not extract that file from your pub cache
 * Fix: two `DiagonalDecoration`s (or `MatrixDecoration`s) with different values compared equal, so rebuilding with a new `lineColor`, `radius`, etc. kept painting the old values and `AnimatedContainer` never switched to the new decoration. `==` and `hashCode` now compare every field
 * Add `DiagonalDecoration.lerp` and `MatrixDecoration.lerp`; `AnimatedContainer` now animates between two decorations of the same type
