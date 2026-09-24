@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'dart:ui' show lerpDouble;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Provides a diagonal decoration to a [Container] or a [BoxDecoration].
 class DiagonalDecoration extends BoxDecoration {
@@ -15,9 +15,9 @@ class DiagonalDecoration extends BoxDecoration {
     this.lineWidth = 1,
     this.distanceBetweenLines = 5,
   }) : assert(
-          distanceBetweenLines > 0,
-          'distanceBetweenLines must be greater than zero',
-        );
+         distanceBetweenLines > 0,
+         'distanceBetweenLines must be greater than zero',
+       );
 
   /// The color of the diagonal lines.
   final Color lineColor;
@@ -121,12 +121,12 @@ class DiagonalDecoration extends BoxDecoration {
 
   @override
   int get hashCode => Object.hash(
-        lineColor,
-        backgroundColor,
-        radius,
-        lineWidth,
-        distanceBetweenLines,
-      );
+    lineColor,
+    backgroundColor,
+    radius,
+    lineWidth,
+    distanceBetweenLines,
+  );
 
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
@@ -200,11 +200,12 @@ class DiagonalPainter extends BoxPainter {
     canvas.clipRRect(rrect);
 
     canvas.drawPath(
-        path..fillType = PathFillType.evenOdd,
-        Paint()
-          ..color = lineColor
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = lineWidth);
+      path..fillType = PathFillType.evenOdd,
+      Paint()
+        ..color = lineColor
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = lineWidth,
+    );
     canvas.restore();
   }
 }

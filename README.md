@@ -12,11 +12,14 @@ Use this DiagonalDecoration or MatrixDecoration to create custom backgrounds for
 
 
 ## Installing:
+Requirements: Flutter 3.47+ (`material_ui`). On older Flutter, use `diagonal_decoration: ^1.2.0`.
+
 In your pubspec.yaml
 ```yaml
 dependencies:
-  diagonal_decoration: ^1.2.0
+  diagonal_decoration: ^2.0.0
 ```
+The samples below use `Colors` from `package:material_ui/material_ui.dart`. Apps that haven't migrated to `material_ui` yet can keep `package:flutter/material.dart`.
 <br>
 
 ## Basic Usage:
