@@ -1,3 +1,7 @@
+## [2.0.1] - [September 26, 2026]
+
+* README: a **More from Yako** grid with an animated preview of each of our other packages.
+
 ## [2.0.0] - [September 25, 2026]
 ### Breaking Changes
 * **Migrated to `package:material_ui`:** Material was decoupled from the Flutter SDK in Flutter 3.47 and now ships as the standalone `material_ui` package. The package now imports `package:material_ui/material_ui.dart` instead of `package:flutter/material.dart` (only for `Colors.white`, the default `DiagonalDecoration.backgroundColor`) and depends on `material_ui: ^1.4.0`. The API is unchanged. Neither decoration reads the Material theme, so they paint the same in apps that use `material_ui` (no `MaterialUiCompatibilityBridge` needed) and in apps still on `package:flutter/material.dart`, which keep working. This is a major version bump, as the Flutter team recommends for this migration
